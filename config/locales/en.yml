@@ -32,4 +32,8 @@
 en:
   hello: "Hello world"
   spree:
-    products_csv_import: 'Import From CSV'
+    products_import:
+      import_button: 'Import From CSV'
+      in_progress: 'Thanks! Your file is being processed. Please come back in few moments to see newly imported products.'
+      missing_headers: "Could not import CSV file without required columns: %{missing_headers}."
+

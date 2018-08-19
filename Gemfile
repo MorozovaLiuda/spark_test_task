@@ -28,6 +28,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# background jobs
+gem 'sidekiq'
+
+# batch import for performance improvements
+gem 'activerecord-import'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -38,6 +44,7 @@ gem 'spree_gateway', '~> 3.3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
 end
 
 group :development do
