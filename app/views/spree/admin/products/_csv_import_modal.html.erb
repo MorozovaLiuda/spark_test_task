@@ -1,0 +1,18 @@
+<div id='csv_import_modal' class='modal fade' aria-labelledby='import-csv', role='dialog', tabindex='-1'>
+  <div class='modal-dialog', role='document'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h4 id='import-csv' class='modal-title'> Import products from CSV file</h4>
+      </div>
+      <%= form_tag admin_products_path, multipart: true, id: 'products-csv-form' do %>
+        <div class='modal-body'>
+          <button> <%= file_field_tag 'product[csv_attributes]', accept: '.csv', required: true %></button>
+        </div>
+      <% end %>
+      <div class='modal-footer'>
+        <button class='btn btn-lg btn-default', data-dismiss='modal'> Close </button>
+        <%= submit_tag 'Import', class: 'btn btn-lg btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>

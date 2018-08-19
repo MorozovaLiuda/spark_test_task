@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  spree:
+    products_csv_import: 'Import From CSV'
