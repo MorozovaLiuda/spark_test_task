@@ -4,7 +4,7 @@
       <div class='modal-header'>
         <h4 id='import-csv' class='modal-title'> Import products from CSV file</h4>
       </div>
-      <%= form_tag admin_products_import_path, multipart: true, id: 'products-csv-form' do |f| %>
+      <%= form_tag admin_products_import_path, multipart: true, id: 'products-csv-form' do %>
         <div class='modal-body'>
           <button> <%= file_field_tag :file, accept: '.csv', required: true %></button>
         </div>

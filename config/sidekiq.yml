@@ -6,4 +6,3 @@
 :daemon: true
 :queues:
   - default
-
