@@ -23,8 +23,8 @@ class Import::ImportProductsJob < ApplicationJob
   private
 
   def process_attributes(raw_attributes)
-    default_category = Spree::ShippingCategory.find_by_name(raw_attributes['category']) || Spree::ShippingCategory.find_by_name('Default').id
-    raw_attributes['shipping_category_id'] = Spree::ShippingCategory.find_by_name(raw_attributes['category']) || default_category
+    default_category = Spree::ShippingCategory.find_by_name('Default').id
+    raw_attributes['shipping_category_id'] = Spree::ShippingCategory.find_by_name(raw_attributes['category'])&.id || default_category
     raw_attributes['price'] = raw_attributes['price'].to_f
     raw_attributes.except('category', 'stock_total')
   end

@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe Spree::Product, type: :model do
-
   describe '#mass_import' do
     context 'success' do
       it 'schedules import job' do

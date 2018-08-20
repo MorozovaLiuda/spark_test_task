@@ -1,5 +1,4 @@
 Spree::Admin::ProductsController.class_eval do
-
   # Create and import actions could be merged actually, didn't want to refator all that
   # create stuff within test task
   def import
